@@ -22,6 +22,7 @@ This project works with docker.
 4. Put .env file (project root)
 
 Example:
+
 ```
 NODE_ENV=development
 PORT=5000
@@ -40,7 +41,7 @@ MYSQL_SHOP_DATABASE=kitstarter
 ADM_HOST=database
 ADM_PORT=3306
 
-TYPEORM_SHOP_NAME=kitstarter
+TYPEORM_SHOP_NAME=''
 ```
 
 ## RUN
