@@ -10,7 +10,7 @@ export let server: Server;
 
 export const init = async function(): Promise<Server> {
     server = Hapi.server({
-        port: process.env.PORT || 4000,
+        port: process.env.PORT || 5000,
         host: '0.0.0.0'
     });
 
