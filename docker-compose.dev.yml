@@ -1,0 +1,35 @@
+version: "3.8"
+
+services:
+  database:
+    extends: 
+      file: common-services.yml
+      service: database
+
+  adminer:
+    image: adminer
+    container_name: kitstarter-docker_api_adminer
+    ports:
+      - "8080:8080"
+    links:
+      - database
+    env_file: .env
+    
+  server:
+    build:
+      context: .
+      target: dev
+    image: kitstarter-api-dev-server
+    container_name: kitstarter-docker_api_server
+    ports:
+      - "5000:5000"
+    volumes:
+      - ./:/usr/src/app/:rw
+      - /usr/src/app/node_modules
+    depends_on:
+      - database
+    env_file: .env
+    networks:
+      default:
+        aliases:
+          - kitstarter-api.local
