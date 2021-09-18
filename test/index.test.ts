@@ -19,7 +19,6 @@ describe("smoke test", async () => {
             method: "get",
             url: "/"
         });
-        expect(res.statusCode).to.equal(200);
-        expect(res.result).to.equal("Hello! Nice to have met you.");
+        expect(res.statusCode).to.equal(404);
     });
 })
