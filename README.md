@@ -50,6 +50,19 @@ For dev environnement, you can build the env with `make build-dev` then run with
 
 For production environnement, you can build the env with `make build-prod` then run with `make prod`
 
+Go on: [kitstarter-api.local:5000/api/v1/hello](kitstarter-api.local:5000/api/v1/hello)
+
+## TYPESCRIPT JOI/INTERFACES
+
+If you need to use Joi for response validation (in other words, if you create a new schema in /src/schema), you shouldn't create corresponding interfaces manually. You have to run :
+
+```
+    npm run types
+```
+
+This will create automatically your interfaces.
+Joi is used to build route documentation and to validate route params, query, response, etc.
+
 ## TESTS
 
 This project use Chai and Mocha for units tests
@@ -59,3 +72,7 @@ Run tests :
 ```
     make tests
 ```
+
+## DOCUMENTATION API
+
+[kitstarter-api.local:5000/api/v1/documentation](kitstarter-api.local:5000/api/v1/documentation)

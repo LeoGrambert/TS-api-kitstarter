@@ -14,7 +14,8 @@
     "prettier:base": "prettier --parser typescript --single-quote",
     "prettier:check": "npm run prettier:base -- --list-different \"src/**/*.{ts,tsx}\"",
     "prettier:write": "npm run prettier:base -- --write \"src/**/*.{ts,tsx}\"",
-    "typeorm": "ts-node -r tsconfig-paths/register ./node_modules/typeorm/cli.js -c kitstarter"
+    "typeorm": "ts-node -r tsconfig-paths/register ./node_modules/typeorm/cli.js -c kitstarter",
+    "types": "ts-node ./src/helpers/schemasToInterface.ts"
   },
   "lint-staged": {
     "*.{ts,tsx}": "eslint --cache --fix",
@@ -35,7 +36,10 @@
   "homepage": "https://github.com/LeoGrambert/TS-api-kitstarter/blob/develop/README.md",
   "dependencies": {
     "@hapi/hapi": "^20.1.5",
+    "@hapi/inert": "^6.0.4",
+    "@hapi/vision": "^6.1.0",
     "dotenv": "^10.0.0",
+    "joi": "^17.4.2",
     "mysql2": "^2.3.0",
     "tslog": "^3.2.2",
     "typeorm": "^0.2.37"
@@ -43,6 +47,9 @@
   "devDependencies": {
     "@types/chai": "^4.2.21",
     "@types/hapi__hapi": "^20.0.9",
+    "@types/hapi__inert": "^5.2.3",
+    "@types/hapi__vision": "^5.5.3",
+    "@types/joi": "^17.2.3",
     "@types/mocha": "^9.0.0",
     "@types/node": "^16.9.2",
     "@typescript-eslint/eslint-plugin": "^4.31.1",
@@ -51,7 +58,9 @@
     "eslint": "^7.32.0",
     "eslint-import-resolver-typescript": "^2.5.0",
     "eslint-plugin-import": "^2.24.2",
+    "hapi-swagger": "^14.2.4",
     "husky": "^7.0.2",
+    "joi-to-typescript": "^2.2.1",
     "lint-staged": "^11.1.2",
     "mocha": "^9.1.1",
     "nodemon": "^2.0.12",
