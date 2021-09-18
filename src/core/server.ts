@@ -6,10 +6,15 @@ import Hapi from '@hapi/hapi';
 import { Server } from '@hapi/hapi';
 import { starterRoutes } from '../routes/starter';
 import logger from '../helpers/logger';
+import connection from './connection';
 
 export let server: Server;
 
 export const init = async function (): Promise<Server> {
+  if (process.env.TYPEORM_SHOP_NAME && process.env.TYPEORM_SHOP_NAME !== '') {
+    await connection();
+  }
+
   server = Hapi.server({
     port: process.env.PORT || 5000,
     host: process.env.HOST || '0.0.0.0',
