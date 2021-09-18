@@ -46,6 +46,7 @@ TYPEORM_SHOP_NAME=kitstarter
 ## RUN
 
 For dev environnement, you can build the env with `make build-dev` then run with `make dev`
+
 For production environnement, you can build the env with `make build-prod` then run with `make prod`
 
 ## TESTS

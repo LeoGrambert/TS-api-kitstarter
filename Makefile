@@ -5,7 +5,7 @@ build-dev:
 build-prod:
 	docker-compose -f docker-compose.yml build
 dev:
-	docker-compose -f docker-compose.dev.yml up -d
+	docker-compose -f docker-compose.dev.yml up
 tests:
 	docker exec kitstarter-docker_api_server yarn test
 prod:
