@@ -1,6 +1,9 @@
-import { Request } from '@hapi/hapi';
+import { IStarter } from '../interfaces';
 
-const getMessage = (params: Record<string, any>): string =>
-  `Hi ${params.name.charAt(0).toUpperCase() + params.name.slice(1)}`;
+const getMessage = (params: Record<string, any>): IStarter => {
+  return {
+    message: `Hi ${params.name.charAt(0).toUpperCase() + params.name.slice(1)}`,
+  };
+};
 
 export { getMessage };

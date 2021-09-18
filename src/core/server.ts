@@ -8,6 +8,7 @@ import { starterRoutes } from '../routes/starter';
 import logger from '../helpers/logger';
 import connection from './connection';
 import { ApiError } from '../classes/ApiError';
+import plugins from './plugins';
 
 export let server: Server;
 
@@ -35,6 +36,8 @@ export const init = async function (): Promise<Server> {
   });
 
   server.realm.modifiers.route.prefix = '/api/v1';
+
+  await server.register(plugins);
 
   server.route(starterRoutes);
 

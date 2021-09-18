@@ -6,7 +6,7 @@ const sayHello = async (request: Request, h: ResponseToolkit): Promise<ResponseO
   const params: Record<string, string> = {
     name: request.params.name || '👋',
   };
-  return genericHandler(h, getMessage, params, 200, 'text/plain');
+  return genericHandler(h, getMessage, params, 200);
 };
 
 export { sayHello };
