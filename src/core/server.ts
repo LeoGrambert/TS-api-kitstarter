@@ -11,7 +11,7 @@ import connection from './connection';
 export let server: Server;
 
 export const init = async function (): Promise<Server> {
-  if (process.env.TYPEORM_SHOP_NAME !== '') {
+  if (process.env.TYPEORM_SHOP_NAME && process.env.TYPEORM_SHOP_NAME !== '') {
     await connection();
   }
 

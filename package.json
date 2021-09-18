@@ -13,7 +13,8 @@
     "lint": "eslint \"src/**\"",
     "prettier:base": "prettier --parser typescript --single-quote",
     "prettier:check": "npm run prettier:base -- --list-different \"src/**/*.{ts,tsx}\"",
-    "prettier:write": "npm run prettier:base -- --write \"src/**/*.{ts,tsx}\""
+    "prettier:write": "npm run prettier:base -- --write \"src/**/*.{ts,tsx}\"",
+    "typeorm": "ts-node -r tsconfig-paths/register ./node_modules/typeorm/cli.js -c kitstarter"
   },
   "lint-staged": {
     "*.{ts,tsx}": "eslint --cache --fix",
@@ -57,6 +58,8 @@
     "npm-run-all": "^4.1.5",
     "prettier": "^2.4.1",
     "ts-node": "^10.2.1",
+    "ts-node-dev": "^1.1.8",
+    "tsconfig-paths": "^3.11.0",
     "typescript": "^4.4.3"
   }
 }
