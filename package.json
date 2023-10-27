@@ -41,7 +41,7 @@
     "dotenv": "^10.0.0",
     "joi": "^17.4.2",
     "mysql2": "^2.3.0",
-    "tslog": "^3.2.2",
+    "tslog": "^3.3.4",
     "typeorm": "^0.2.37"
   },
   "devDependencies": {
